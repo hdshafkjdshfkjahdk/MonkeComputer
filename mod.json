@@ -13,7 +13,7 @@
   "dependencies": [
     {
       "id": "monkecodegen",
-      "version": ">=0.7.4",
+      "version": ">=0.8.0",
       "downloadIfMissing": "https://github.com/RedBrumbler/MonkeCodegen/releases/download/v0.7.4/MonkeCodegen.qmod"
     },
     {
@@ -28,7 +28,8 @@
     "libcustom-types.so",
     "libquest-cosmetic-loader_0_2_2.so",
     "libzip.so",
-    "libmonkecomputer.so"
+    "libmonkecomputer.so",
+    "libbeatsaber-hook_2_2_4.so"
   ],
   "fileCopies": [
     {
