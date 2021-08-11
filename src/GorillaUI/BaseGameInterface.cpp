@@ -150,6 +150,7 @@ namespace GorillaUI::BaseGameInterface
         if (!stickTurning) stickTurning = il2cpp_utils::createcsstr("stickTurning", il2cpp_utils::StringType::Manual);
         if (!turnFactor) turnFactor = il2cpp_utils::createcsstr("turnFactor", il2cpp_utils::StringType::Manual);
 
+        turnValue = turnValue > 10 ? 10 : (turnValue < 0 ? 0 : turnValue);
         PlayerPrefs::SetString(stickTurning, turnTypeCS);
         PlayerPrefs::SetInt(turnFactor, turnValue);
 
