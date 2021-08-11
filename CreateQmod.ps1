@@ -18,10 +18,9 @@ $libs = @()
 
 
 $cover = "./" + $modJson.coverImage
-
 $fileList = @($mod)
 
-if ((-not $cover -eq "./") -and (Test-Path $cover))
+if ((-not ($cover -eq "./")) -and (Test-Path $cover))
 {
     $fileList += ,$cover
 }

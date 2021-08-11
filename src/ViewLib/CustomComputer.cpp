@@ -152,7 +152,7 @@ namespace GorillaUI
         {
             GlobalNamespace::GorillaKeyboardButton* button = buttons->values[i];
             Il2CppString* characterString = button->characterString;
-            std::string cppString = to_utf8(csstrtostr(characterString));
+            std::string cppString = characterString ? to_utf8(csstrtostr(characterString)) : "";
             cppString = toLower(cppString);
             EKeyboardKey key;
             if (!NameToKey(cppString, key)) continue;
