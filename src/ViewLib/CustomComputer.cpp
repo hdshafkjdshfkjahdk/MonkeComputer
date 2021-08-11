@@ -161,7 +161,6 @@ namespace GorillaUI
 
             customButton->pressTime = button->pressTime;
             customButton->functionKey = button->functionKey;
-            customButton->sliderValues = button->sliderValues;
             Object::DestroyImmediate(button);
 
             customButton->Init(this, key);

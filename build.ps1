@@ -1,21 +1,33 @@
+param($p1)
+
 $NDKPath = Get-Content $PSScriptRoot/ndkpath.txt
 
 $buildScript = "$NDKPath/build/ndk-build"
 
 $OS = $PSVersionTable.OS
-$windows = $OS.Contains("Windows")
+if ($OS)
+{
+    $windows = $OS.Contains("Windows")
+}
+else
+{
+    $windows = 'True'
+}
 
 # when core, or when on windows we want to add .cmd to the end
 if ((-not ($PSVersionTable.PSEdition -eq "Core")) -or $windows) {
     $buildScript += ".cmd"
 }
 
+$coreCount = 0
 #get amount of processors
 # if on a windows system
 if ($windows)
 {
-    $proc = Get-ComputerInfo -Property CsProcessors
-    $coreCount = $proc.CsProcessors.NumberOfCores
+    $prop = WMIC CPU Get NumberOfCores 
+    
+    $coreCount = $prop.split('\n')[2]
+    $coreCount = $coreCount.Trim()
 }
 # if on a linux system
 else
