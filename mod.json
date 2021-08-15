@@ -18,8 +18,8 @@
     },
     {
       "id": "gorillautils",
-      "version": ">=0.2.2",
-      "downloadIfMissing": "https://github.com/RedBrumbler/GorillaUtils/releases/latest/download/GorillaUtils.qmod"
+      "version": ">=0.2.3",
+      "downloadIfMissing": "https://github.com/RedBrumbler/GorillaUtils/releases/download/v0.2.3/GorillaUtils.qmod"
     }
   ],
   "modFiles": [],
